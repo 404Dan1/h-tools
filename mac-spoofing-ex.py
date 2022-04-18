@@ -3,6 +3,13 @@ import subprocess
 import re
 
 
+# The code below changes your MAC address
+# Major changes to come:
+#   - randomized MAC address with the regular expression in eth_pattern
+#   - add automate change to IP address
+#   - automate change both MAC and IP, maybe with the crontab command and cycle through a dictionary of preset addresses
+
+
 class MACspoof:
     def __init__(self):
         self.MAC = ""
@@ -14,7 +21,8 @@ class MACspoof:
         cmd_output = iface_output.stdout.decode('utf-8')
         # uncomment -print(cmd_output)- to see the output of the 'ifconfig' command
         # print(cmd_output)
-
+        
+        # this pattern is from https://regex101.com
         # ether\s[\da-z]{2}:[\da-z]{2}:[\da-z]{2}:[\da-z]{2}:[\da-z]{2}:[\da-z]{2}
         eth_pattern = r'ether\s[\da-z]{2}:[\da-z]{2}:[\da-z]{2}:[\da-z]{2}:[\da-z]{2}:[\da-z]{2}'
 
