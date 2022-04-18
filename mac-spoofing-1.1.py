@@ -6,8 +6,8 @@ import re
 # The code below changes your MAC address
 # Major changes to come:
 #   - randomized MAC address with the regular expression in eth_pattern
-#   - add automate change to IP address
-#   - automate change both MAC and IP, maybe with the crontab command and cycle through a dictionary of preset addresses
+#   - add random automation IP address changes
+#   - automate random changes to both MAC and IP, maybe with the crontab command and cycle through a dictionary of preset addresses
 
 
 class MACspoof:
