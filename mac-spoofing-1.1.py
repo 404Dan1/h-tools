@@ -59,8 +59,8 @@ if __name__ == "__main__":
     mac_spoof = MACspoof()
     currentMAC = mac_spoof.get_mac("eth0")
     # print(currentMAC)
-
+    
+    # you can change the MAC address from here then run the program
     spoofing = mac_spoof.change_mac("eth0", "04:02:65:23:ab:33")
 
-    # make sure to run 'sudo' before you execute the program (Linux)
     # print(spoofing)
